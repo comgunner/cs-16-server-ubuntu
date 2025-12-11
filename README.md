@@ -41,39 +41,6 @@ and downloads the systemd service installer **without enabling it automatically*
 
 ---
 
-## Why SteamCMD Requires Manual Input
-
-SteamCMD is launched manually during the installation because HLDS is highly sensitive to incorrect directory paths.  
-Providing the commands manually ensures a clean and correct installation.
-
-When the SteamCMD console appears, enter exactly:
-
-```bash
-force_install_dir /home/csserver/27020/
-```
-```bash
-login anonymous
-```
-```bash
-app_update 90 validate
-```
-```bash
-exit
-```
-
-
-
-
-This prevents:
-
-- Path misconfiguration  
-- Corrupted validation  
-- Cached login issues  
-- SteamCMD writing files into the wrong directory  
-
-These manual steps guarantee that AppID **90** (HLDS for CS 1.6) is installed properly.
-
----
 
 ## Understanding the HLDS Test Output
 

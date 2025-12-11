@@ -180,17 +180,26 @@ step_server_install() {
         chmod +x steamcmd.sh"
 
     echo
-    echo -e "${CYAN}${BOLD}SteamCMD will open now.${RESET}"
-    echo -e "${YELLOW}${BOLD}Inside SteamCMD, type these commands in order:${RESET}"
-    echo -e "  ${GREEN}force_install_dir /home/${SERVER_USER}/27020/${RESET}"
-    echo -e "  ${GREEN}login anonymous${RESET}"
-    echo -e "  ${GREEN}app_update 90 validate${RESET}"
-    echo -e "  ${GREEN}exit${RESET}"
-    echo
-    echo -e "${BLUE}This will download and validate the HLDS binaries for Counter-Strike 1.6 (App ID 90).${RESET}"
-    pause_msg
-
-    run_as_csserver "cd '${SERVER_HOME}' && ./steamcmd.sh"
+    # =====================================================================
+    # NOTA:
+    # Antes aquí se abría SteamCMD y se pedía al usuario teclear:
+    #   force_install_dir /home/csserver/27020/
+    #   login anonymous
+    #   app_update 90 validate
+    #   exit
+    # Eso ya no es necesario, así que se deja comentado para referencia.
+    # =====================================================================
+    # echo -e "${CYAN}${BOLD}SteamCMD will open now.${RESET}"
+    # echo -e "${YELLOW}${BOLD}Inside SteamCMD, type these commands in order:${RESET}"
+    # echo -e "  ${GREEN}force_install_dir /home/${SERVER_USER}/27020/${RESET}"
+    # echo -e "  ${GREEN}login anonymous${RESET}"
+    # echo -e "  ${GREEN}app_update 90 validate${RESET}"
+    # echo -e "  ${GREEN}exit${RESET}"
+    # echo
+    # echo -e "${BLUE}This will download and validate the HLDS binaries for Counter-Strike 1.6 (App ID 90).${RESET}"
+    # pause_msg
+    #
+    # run_as_csserver "cd '${SERVER_HOME}' && ./steamcmd.sh"
 
     echo
     echo "==========================================="

@@ -36,39 +36,6 @@ y descarga el instalador del servicio systemd **sin activarlo automáticamente**
 - Descarga del instalador systemd oficial para ejecución permanente.
 - Compatible con instalaciones limpias de Ubuntu Server 24.04.
 
----
-
-## ¿Por qué SteamCMD requiere comandos manuales?
-
-El proceso con SteamCMD se realiza manualmente porque HLDS es muy sensible a rutas incorrectas.  
-Ingresar los comandos manualmente garantiza una instalación limpia y sin corrupción.
-
-Al abrir SteamCMD, debes escribir exactamente:
-```bash
-force_install_dir /home/csserver/27020/
-```
-```bash
-login anonymous
-```
-```bash
-app_update 90 validate
-```
-```bash
-exit
-```
-
-
-
-
-
-Esto evita:
-
-- Archivos instalados en el directorio equivocado  
-- Validaciones corruptas  
-- Problemas con caché de sesiones  
-- Reescritura accidental de carpetas del sistema  
-
-De esta forma se asegura que el AppID **90** (HLDS de CS 1.6) se instale correctamente.
 
 ---
 
@@ -117,8 +84,9 @@ Al finalizar, verás:
 INSTALLATION FLOW COMPLETED
 CS 1.6 server installed at: /home/csserver/27020
 Systemd installer script at:
+```bash
 /home/csserver/install_cstrike_service.sh
-
+```
 
 
 
