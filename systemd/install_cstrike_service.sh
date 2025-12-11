@@ -80,7 +80,7 @@ echo "----------------------------------------"
 echo ""
 
 # --- COMANDO DE INICIO FINAL (DIRECTO, SIN SCREEN) ---
-HLDS_RUN_COMMAND="$WORKING_DIR/hlds_run -game cstrike +ip $SERVER_IP +port $SERVER_PORT -pingboost 3 +maxplayers 4 +map de_dust"
+HLDS_RUN_COMMAND="$WORKING_DIR/hlds_run -game cstrike +ip $SERVER_IP +port $SERVER_PORT -pingboost 3 +maxplayers 22 +map de_dust"
 
 # --- VERIFICACIONES Y PREPARACIÓN ---
 
