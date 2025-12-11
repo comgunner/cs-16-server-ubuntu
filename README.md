@@ -1,5 +1,14 @@
+
+
+
 # HLDS Auto Installer for Ubuntu 24.04  
 ### Counter-Strike 1.6 Dedicated Server (HLDS) – Automated Setup Script
+
+wget "https://raw.githubusercontent.com/comgunner/cs-16-server-ubuntu/refs/heads/main/hlds-ubuntu24-installer.sh"
+sudo chmod +x hlds-ubuntu24-installer.sh
+sudo ./hlds-ubuntu24-installer.sh
+
+---
 
 This repository provides an automated installer for deploying a fully functional  
 **Counter-Strike 1.6 HLDS server** on **Ubuntu Server 24.04**, complementing the official tutorial:
