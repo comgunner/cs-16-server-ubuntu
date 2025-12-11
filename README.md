@@ -5,11 +5,12 @@
 ### Counter-Strike 1.6 Dedicated Server (HLDS) – Automated Setup Script
 
 ```bash
-
 wget "https://raw.githubusercontent.com/comgunner/cs-16-server-ubuntu/refs/heads/main/hlds-ubuntu24-installer.sh"
-
+```
+```bash
 sudo chmod +x hlds-ubuntu24-installer.sh
-
+```
+```bash
 sudo ./hlds-ubuntu24-installer.sh 
 ```
 
@@ -47,10 +48,18 @@ Providing the commands manually ensures a clean and correct installation.
 
 When the SteamCMD console appears, enter exactly:
 
+```bash
 force_install_dir /home/csserver/27020/
+```
+```bash
 login anonymous
+```
+```bash
 app_update 90 validate
+```
+```bash
 exit
+```
 
 
 
@@ -118,10 +127,11 @@ bash
 
 To manually start another HLDS test:
 
+```bash
 sudo -u csserver -H bash -lc
 "cd '/home/csserver/27020' && ./hlds_run -game cstrike +ip YOUR_IP +port 27020
 -pingboost 3 +maxplayers 22 +map de_dust -autoupdate"
-
+```
 
 
 
@@ -138,8 +148,9 @@ csharp
 
 Run it as a sudo-capable user:
 
+```bash
 sudo /home/csserver/install_cstrike_service.sh
-
+```
 
 
 
@@ -152,11 +163,12 @@ The service installer will:
 
 You can manage the server with:
 
+```bash
 sudo systemctl start cstrike
 sudo systemctl stop cstrike
 sudo systemctl restart cstrike
 sudo systemctl status cstrike
-
+```
 
 
 
@@ -166,7 +178,9 @@ sudo systemctl status cstrike
 
 To enable support for both Steam and Non-Steam 47/48 clients, use:
 
+```bash
 sudo ./hlds-ubuntu24-installer.sh --no-steam
+```
 
 
 

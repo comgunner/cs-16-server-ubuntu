@@ -5,14 +5,14 @@ Este repositorio proporciona un instalador automatizado para desplegar un servid
 **Counter-Strike 1.6 HLDS** completamente funcional en **Ubuntu Server 24.04**, complementando el tutorial oficial:
 
 ```bash
-
 wget "https://raw.githubusercontent.com/comgunner/cs-16-server-ubuntu/refs/heads/main/hlds-ubuntu24-installer.sh"
-
+```
+```bash
 sudo chmod +x hlds-ubuntu24-installer.sh
-
+```
+```bash
 sudo ./hlds-ubuntu24-installer.sh 
 ```
-
 
 ---
 
@@ -44,11 +44,19 @@ El proceso con SteamCMD se realiza manualmente porque HLDS es muy sensible a rut
 Ingresar los comandos manualmente garantiza una instalación limpia y sin corrupción.
 
 Al abrir SteamCMD, debes escribir exactamente:
-
+```bash
 force_install_dir /home/csserver/27020/
+```
+```bash
 login anonymous
+```
+```bash
 app_update 90 validate
+```
+```bash
 exit
+```
+
 
 
 
@@ -115,11 +123,11 @@ Systemd installer script at:
 
 
 Para ejecutar otra prueba manual:
-
+```bash
 sudo -u csserver -H bash -lc
 "cd '/home/csserver/27020' && ./hlds_run -game cstrike +ip TU_IP +port 27020
 -pingboost 3 +maxplayers 22 +map de_dust -autoupdate"
-
+```
 
 
 
@@ -136,10 +144,9 @@ Se encuentra en:
 
 
 Para instalar el servicio:
-
+```bash
 sudo /home/csserver/install_cstrike_service.sh
-
-
+```
 
 
 Este instalador:
@@ -150,11 +157,12 @@ Este instalador:
 
 Comandos de administración del servicio:
 
+```bash
 sudo systemctl start cstrike
 sudo systemctl stop cstrike
 sudo systemctl restart cstrike
 sudo systemctl status cstrike
-
+```
 
 
 
@@ -163,9 +171,9 @@ sudo systemctl status cstrike
 ## Modo opcional: DProto (Steam + No-Steam)
 
 Para habilitar soporte dual (protocolo 47/48), ejecuta:
-
+```bash
 sudo ./hlds-ubuntu24-installer.sh --no-steam
-
+```
 
 
 
