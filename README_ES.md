@@ -4,9 +4,15 @@
 Este repositorio proporciona un instalador automatizado para desplegar un servidor  
 **Counter-Strike 1.6 HLDS** completamente funcional en **Ubuntu Server 24.04**, complementando el tutorial oficial:
 
+```bash
+
 wget "https://raw.githubusercontent.com/comgunner/cs-16-server-ubuntu/refs/heads/main/hlds-ubuntu24-installer.sh"
+
 sudo chmod +x hlds-ubuntu24-installer.sh
-sudo ./hlds-ubuntu24-installer.sh
+
+sudo ./hlds-ubuntu24-installer.sh 
+```
+
 
 ---
 
